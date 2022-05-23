@@ -6,7 +6,9 @@ package DebugExercise;
  */
 public class DebugExercise1 {
     public static int divideThenRound(int top, int bottom) {
-        int quotient = top / bottom;
+        /* force set the divided result to float type, int/int can only get int type
+         * must one index of division be float or double type can get float or double results. */
+        float quotient = (float) top / bottom;
         int result = Math.round(quotient);
         return result;
     }
