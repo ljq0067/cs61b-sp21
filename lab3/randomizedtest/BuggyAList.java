@@ -2,6 +2,7 @@ package randomizedtest;
 
 /** Array based list.
  *  @author Josh Hug
+ *  FIXED
  */
 
 //         0 1  2 3 4 5 6 7
@@ -60,7 +61,10 @@ public class BuggyAList<Item> {
       * returns deleted item. */
     public Item removeLast() {
         if ((size < items.length / 4) && (size > 4)) {
+            /* should not resize to size/4 otherwise cannot copy all values to resized array, it's size needs to be larger than current size
             resize(size / 4);
+            */
+            resize(items.length / 4);
         }
         Item x = getLast();
         items[size - 1] = null;
