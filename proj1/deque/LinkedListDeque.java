@@ -1,7 +1,8 @@
 package deque;
+
 import java.util.Iterator;
 
-public class LinkedListDeque<T> {
+public class LinkedListDeque<T> implements Iterable<T> {
     /**
      * choose circular sentinel topology for doubly linked list that
      * the last node's next points to the first node.
@@ -142,6 +143,28 @@ public class LinkedListDeque<T> {
      * The Deque objects we’ll make are iterable (i.e. Iterable<T>)
      * so we must provide this method to return an iterator.
      */
+    public Iterator<T> iterator() {
+        return new LinkedListDequeIterator();
+    }
+
+    private class LinkedListDequeIterator implements Iterator<T> {
+        private Node ptr;
+        private LinkedListDequeIterator() {
+            ptr = sentinel.next;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return ptr == sentinel;
+        }
+
+        @Override
+        public T next() {
+            T item = ptr.item;
+            ptr = ptr.next;
+            return item;
+        }
+    }
 
     /**
      * Returns whether or not the parameter o is equal to the Deque.
@@ -151,5 +174,26 @@ public class LinkedListDeque<T> {
      * The java instanceof operator is used to test
      * whether the object is an instance of the specified type (class or subclass or interface))
      */
-
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        if (!(o instanceof LinkedListDeque)) {
+            return false;
+        }
+        LinkedListDeque other = (LinkedListDeque) o;
+        if (other.size() != this.size()) {
+            return false;
+        }
+        for (int i = 0; i < size; i++) {
+            if (!other.get(i).equals(this.get(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
