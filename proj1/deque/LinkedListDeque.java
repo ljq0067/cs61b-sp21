@@ -2,7 +2,7 @@ package deque;
 
 import java.util.Iterator;
 
-public class LinkedListDeque<T> implements Iterable<T> {
+public class LinkedListDeque<T> implements Iterable<T>, Deque<T> {
     /**
      * choose circular sentinel topology for doubly linked list that
      * the last node's next points to the first node.
@@ -59,10 +59,11 @@ public class LinkedListDeque<T> implements Iterable<T> {
 
     /**
      * Returns true if deque is empty, false otherwise.
-     */
+
     public boolean isEmpty() {
         return size == 0;
     }
+    */
 
     /**
      * Returns the number of items in the deque.
