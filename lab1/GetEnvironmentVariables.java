@@ -3,13 +3,13 @@ import java.util.Properties;
 public class GetEnvironmentVariables {
 
     //  Fill in the path to your sp21-s*** folder between the quotes
-    public static String REPO_DIR = "";
+    public static String REPO_DIR = "\"/Users/Jieqian Liu/Data Structure Java/skeleton-sp21-master\"";
 
     //  Fill in the path to your snaps-sp21-s*** folder between the quotes
-    public static String SNAPS_DIR = "";
+    public static String SNAPS_DIR = "\"/Users/Jieqian Liu/Data Structure Java/skeleton-sp21-master\"";
 
     // Fill in the type of your shell by running 'echo $0` in your terminal. It should be zsh or bash.
-    public static String SHELL = "";
+    public static String SHELL = "zsh";
 
     public static void main(String[] args) {
 
@@ -49,7 +49,7 @@ public class GetEnvironmentVariables {
         }
 
         System.out.println();
-        System.out.println("Keep reading the spec to know what to do with this output");
+        System.out.println("Keep reading the spec to know what to do with this output, add double quotes to your repo if it has space");
         System.out.println("----------------------------------------------------------");
         System.out.println(repo);
         System.out.println(snaps);
