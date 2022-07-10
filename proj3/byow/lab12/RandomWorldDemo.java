@@ -18,7 +18,6 @@ public class RandomWorldDemo {
 
     /**
      * Fills the given 2D array of tiles with RANDOM tiles.
-     * @param tiles
      */
     public static void fillWithRandomTiles(TETile[][] tiles) {
         int height = tiles[0].length;
@@ -39,7 +38,7 @@ public class RandomWorldDemo {
         switch (tileNum) {
             case 0: return Tileset.WALL;
             case 1: return Tileset.FLOWER;
-            case 2: return Tileset.NOTHING;
+            case 2: return Tileset.MOUNTAIN;
             default: return Tileset.NOTHING;
         }
     }
