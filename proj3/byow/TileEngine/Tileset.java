@@ -24,7 +24,7 @@ public class Tileset {
             "floor");
     public static final TETile NOTHING = new TETile(' ', Color.black, Color.black, "nothing");
     public static final TETile GRASS = new TETile('"', Color.green, Color.black, "grass");
-    public static final TETile WATER = new TETile('≈', Color.blue, Color.black, "water");
+    public static final TETile WATER = new TETile('≈', new Color(0, 191, 255), Color.black, "water");
     public static final TETile FLOWER = new TETile('❀', Color.magenta, Color.pink, "flower");
     public static final TETile LOCKED_DOOR = new TETile('█', Color.orange, Color.black,
             "locked door");
