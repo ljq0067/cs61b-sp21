@@ -24,9 +24,11 @@ public class Tileset {
             "floor");
     public static final TETile NOTHING = new TETile(' ', Color.black, Color.black, "nothing");
     public static final TETile GRASS = new TETile('"', Color.green, Color.black, "grass");
+    public static final TETile COIN = new TETile('●', Color.yellow, Color.black, "coin");
+    public static final TETile HEART = new TETile('❤', Color.red, Color.black, "heart");
     public static final TETile WATER = new TETile('≈', new Color(0, 191, 255), Color.black, "water");
     public static final TETile FLOWER = new TETile('❀', Color.magenta, Color.pink, "flower");
-    public static final TETile LOCKED_DOOR = new TETile('█', Color.orange, Color.black,
+    public static final TETile LOCKED_DOOR = new TETile('c', Color.orange, Color.black,
             "locked door");
     public static final TETile UNLOCKED_DOOR = new TETile('▢', Color.orange, Color.black,
             "unlocked door");

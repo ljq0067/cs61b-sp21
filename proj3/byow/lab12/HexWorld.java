@@ -129,7 +129,7 @@ public class HexWorld {
         int tileNum = RANDOM.nextInt(8);
         switch (tileNum) {
             case 0:
-                return Tileset.FLOWER;
+                return Tileset.COIN;
             case 1:
                 return Tileset.TREE;
             case 2:
