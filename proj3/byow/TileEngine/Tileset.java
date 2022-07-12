@@ -28,13 +28,15 @@ public class Tileset {
     public static final TETile HEART = new TETile('❤', Color.red, Color.black, "heart");
     public static final TETile WATER = new TETile('≈', new Color(0, 191, 255), Color.black, "water");
     public static final TETile FLOWER = new TETile('❀', Color.magenta, Color.pink, "flower");
-    public static final TETile LOCKED_DOOR = new TETile('c', Color.orange, Color.black,
+    public static final TETile LOCKED_DOOR = new TETile('█', Color.orange, Color.black,
             "locked door");
     public static final TETile UNLOCKED_DOOR = new TETile('▢', Color.orange, Color.black,
             "unlocked door");
-    public static final TETile SAND = new TETile('▒', Color.yellow, Color.black, "sand");
+    public static final TETile SAND = new TETile('▒', Color.orange, Color.black, "sand");
     public static final TETile MOUNTAIN = new TETile('▲', Color.gray, Color.black, "mountain");
     public static final TETile TREE = new TETile('♠', Color.green, Color.black, "tree");
+
+    public static final TETile STAR = new TETile('★',Color.yellow,Color.black,"star");
 }
 
 

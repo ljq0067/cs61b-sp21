@@ -14,7 +14,7 @@ public class Main {
             engine.interactWithInputString(args[1]);
             System.out.println(engine.toString());
         // DO NOT CHANGE THESE LINES YET ;)
-        } else if (args.length == 2 && args[0].equals("-p")) { System.out.println("Coming soon."); } 
+        } else if (args.length == 2 && args[0].equals("-p")) { System.out.println("Coming soon."); }
         // DO NOT CHANGE THESE LINES YET ;)
         else {
             Engine engine = new Engine();
@@ -22,3 +22,17 @@ public class Main {
         }
     }
 }
+
+
+/**
+ * Collect all the coins randomly in the rooms.
+ * you can dodge the enemy to avoid touch it. but there has some special enemies you must beat.
+ * If you meet enemy, you need find the star in the dark map with limited time to beat it.(similar to proj3-2)
+ * You have several lives and will lose one heart each time you lose the change to enemy.
+ *
+ * OPTIONAL:
+ * you may find stairs to go upstairs to another floor to next level but required you to collect all coins first.
+ * you need collect ax/chopper first to cut down trees and chopper has limited times to use.
+ * you need find boat to across the water to get into another room.
+ *
+ */
