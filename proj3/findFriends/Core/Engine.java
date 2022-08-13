@@ -274,7 +274,7 @@ public class Engine {
             world[leftRight][botTop] = add;
         } else if (destination.description().equals("Trap")) {
             FindStar x = new FindStar();
-            String seed = String.valueOf('N' + destinationY + destinationX + 'S');
+            String seed = 'N' + String.valueOf(destinationY) + String.valueOf(destinationX) + 'S';
             String health = String.valueOf(x.interactWithInputString(seed, Integer.parseInt(avatarDataArray[2])));
             avatarData = destinationY + "_" + destinationX + "_" + health;
             if (render) {
