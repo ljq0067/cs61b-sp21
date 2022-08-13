@@ -1,6 +1,6 @@
-package findFriends.Core;
+package byow.findFriends.Core;
 
-import findFriends.TileEngine.TETile;
+import byow.findFriends.TileEngine.TETile;
 
 public interface Characters {
     String getName();

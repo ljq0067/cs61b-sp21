@@ -1,7 +1,7 @@
-package findFriends.Core;
+package byow.findFriends.Core;
 
-import findFriends.TileEngine.TETile;
-import findFriends.TileEngine.Tileset;
+import byow.findFriends.TileEngine.TETile;
+import byow.findFriends.TileEngine.Tileset;
 
 import java.awt.*;
 

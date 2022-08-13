@@ -1,8 +1,8 @@
-package findFriends.Core;
+package byow.findFriends.Core;
 
 import edu.princeton.cs.introcs.StdDraw;
 import java.util.concurrent.TimeUnit;
-import findFriends.TileEngine.TERenderer;
+import byow.findFriends.TileEngine.TERenderer;
 
 public class InputKey implements Inputs {
 

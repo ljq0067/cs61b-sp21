@@ -1,7 +1,7 @@
-package findFriends.Core;
+package byow.findFriends.Core;
 
-import findFriends.TileEngine.TETile;
-import findFriends.TileEngine.TERenderer;
+import byow.findFriends.TileEngine.TETile;
+import byow.findFriends.TileEngine.TERenderer;
 
 /** This is the main entry point for the program. This class simply parses
  *  the command line inputs, and lets the byow.Core.Engine class take over

@@ -1,4 +1,4 @@
-package findFriends.Core;
+package byow.findFriends.Core;
 
 public class InputString implements Inputs {
     private String input;

@@ -1,4 +1,4 @@
-package findFriends.Core;
+package byow.findFriends.Core;
 
 import java.util.Random;
 

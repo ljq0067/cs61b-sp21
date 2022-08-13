@@ -1,4 +1,4 @@
-package findFriends.Core;
+package byow.findFriends.Core;
 
 public interface Inputs {
     char getNextKey();

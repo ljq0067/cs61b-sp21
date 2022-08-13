@@ -1,10 +1,10 @@
-package findFriends.TileEngine;
+package byow.findFriends.TileEngine;
 
 import edu.princeton.cs.introcs.StdDraw;
 
 import java.awt.Color;
 import java.awt.Font;
-import findFriends.Core.Engine;
+import byow.findFriends.Core.Engine;
 import java.util.Map;
 import java.util.HashMap;
 

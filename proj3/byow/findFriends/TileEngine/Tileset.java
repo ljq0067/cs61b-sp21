@@ -1,4 +1,4 @@
-package findFriends.TileEngine;
+package byow.findFriends.TileEngine;
 
 import java.awt.Color;
 

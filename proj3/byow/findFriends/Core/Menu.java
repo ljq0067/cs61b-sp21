@@ -1,8 +1,8 @@
-package findFriends.Core;
+package byow.findFriends.Core;
 
 import edu.princeton.cs.introcs.StdDraw;
 import java.awt.*;
-import findFriends.TileEngine.Tileset;
+import byow.findFriends.TileEngine.Tileset;
 
 public class Menu {
     public static final Font TITLE_FONT = new Font("Arial", Font.BOLD, 30);
