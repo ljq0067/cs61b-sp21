@@ -451,7 +451,7 @@ public class Engine {
 
 
             } else if (nextChar == 'Q') {
-                return;
+                System.exit(0);
             }
         }
 
@@ -468,7 +468,8 @@ public class Engine {
         //
         // See proj3.byow.InputDemo for a demo of how you can make a nice clean interface
         // that works for many different input types.
-
+        tracker = "";
+        time = 0.0;
         TERenderer ter = new TERenderer();
         /* Feel free to change the width and height. */
         int W = 80;
@@ -477,7 +478,6 @@ public class Engine {
         ter.initialize(WIDTH, HEIGHT);
 
         world = new TETile[W][H];
-
 
         for (int x = 0; x < W; x += 1) {
             for (int y = 0; y < H; y += 1) {
@@ -543,7 +543,6 @@ public class Engine {
             seed = seed + s;
             creator = new StringToWorld(seed, world);
 
-
             charX = creator.getCharX();
             charY = creator.getCharY();
             i++;
@@ -559,8 +558,6 @@ public class Engine {
 
             while (i < input.length() && (input.charAt(i) != 'l' && input.charAt(i) != 'L')) {
                 i++;
-
-
             }
 
             if (i < input.length() && (input.charAt(i) == 'l' || input.charAt(i) != 'L')) {
@@ -570,12 +567,36 @@ public class Engine {
                     return interactWithInputString(track);
                 }
             }
-
-
         }
 
         ter.renderFrame(world);
+        roomHider(charX, charY);
         StdDraw.show();
+
+        KeyboardInputSource inputSource;
+        inputSource = new KeyboardInputSource();
+        timer = new Stopwatch();
+        while (inputSource.possibleNextInput()) {
+            char choice = inputSource.getNextKey();
+            tracker = tracker + choice;
+            if (timer.elapsedTime() + time > 30) {
+                outcomeDisplay("LOSE");
+            }
+            moveCharacter(choice);
+            StdDraw.enableDoubleBuffering();
+            StdDraw.clear();
+            ter.renderFrame(world);
+            roomHider(charX, charY);
+            StdDraw.setPenColor(Color.white);
+            StdDraw.setPenColor(Color.white);
+            Font font2 = new Font("Futura Bold Italic", Font.PLAIN, 15);
+            StdDraw.setFont(font2);
+            roomHider(charX, charY);
+            StdDraw.setPenColor(Color.white);
+            StdDraw.text(3, HEIGHT - 1, "Time: " + timer.elapsedTime());
+            StdDraw.text(9, HEIGHT - 1, world[(int) Math.round(StdDraw.mouseX())][(int) Math.round(StdDraw.mouseY())].description());
+            StdDraw.show();
+        }
 
 
         return world;
@@ -618,7 +639,6 @@ public class Engine {
         public boolean possibleNextInput() {
             return true;
         }
-
 
     }
 
