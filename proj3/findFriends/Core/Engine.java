@@ -273,7 +273,10 @@ public class Engine {
             TETile add = new TETile(p1, p2, p3, p4, p5);
             world[leftRight][botTop] = add;
         } else if (destination.description().equals("Trap")) {
-            avatarData = destinationY + "_" + destinationX + "_" + avatarDataArray[2];
+            FindStar x = new FindStar();
+            String seed = String.valueOf('N' + destinationY + destinationX + 'S');
+            String health = String.valueOf(x.interactWithInputString(seed, Integer.parseInt(avatarDataArray[2])));
+            avatarData = destinationY + "_" + destinationX + "_" + health;
             if (render) {
                 ter.updateCurrentTile(avatarData);
             }
@@ -314,11 +317,23 @@ public class Engine {
         StdDraw.text(40, 20, "PLAY AGAIN (P)");
         StdDraw.text(50, 20, "QUIT (Q)");
         StdDraw.show();
-        StdDraw.pause(5000);
+        StdDraw.pause(3000);
 
-        StdDraw.setCanvasSize();
-        Engine engine = new Engine();
-        engine.interactWithKeyboard();
+        Inputs inputSource;
+        inputSource = new InputKey(ter);
+        while (inputSource.possibleNextInput()) {
+            char nextChar = inputSource.getNextKey();
+            if (nextChar == 'P' || nextChar == 'p') {
+                StdDraw.setCanvasSize();
+                Engine engine = new Engine();
+                System.out.println("Keyboard time!");
+                engine.interactWithKeyboard();
+            }
+            if (nextChar == 'Q' || nextChar == 'q') {
+                System.exit(0);
+            }
+        }
+
     }
 
     private TETile[][] generateWorld(String input) {
@@ -558,7 +573,7 @@ public class Engine {
                 String roomData = rooms.get(i);
                 String[] roomDataArray = roomData.split("_");
                 for (int j = 0; j < roomDataArray.length; j += 4) {
-                    int bot = Integer.parseInt(roomDataArray[j + 0]);
+                    int bot = Integer.parseInt(roomDataArray[j]);
                     int left = Integer.parseInt(roomDataArray[j + 1]);
                     int top = Integer.parseInt(roomDataArray[j + 2]);
                     int right = Integer.parseInt(roomDataArray[j + 3]);

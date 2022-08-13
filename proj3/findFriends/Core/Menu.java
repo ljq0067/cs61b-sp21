@@ -31,21 +31,25 @@ public class Menu {
     public void drawSeed(String seed) {
         drawMe();
         StdDraw.text(0.5, 0.20, "Seed: " + seed);
+        StdDraw.show();
     }
 
     public void invalidSeed(char key, String seed) {
         drawMe();
         drawSeed(seed);
         StdDraw.text(0.5, 0.15, key + " is an invalid command, please key in a digit or 'S'");
+        StdDraw.show();
     }
 
     public void invalidCommand(char c) {
         drawMe();
         StdDraw.text(0.5, 0.15, c + " is an invalid command, please key in 'N', 'L', or 'Q'");
+        StdDraw.show();
     }
 
     public void drawLore() {
         StdDraw.picture(0.5, 0.5, Tileset.PREFIX_PATH + "LORE_B.png");
         StdDraw.text(0.5, 0.10, "Press 'B' to return to menu");
+        StdDraw.show();
     }
 }
